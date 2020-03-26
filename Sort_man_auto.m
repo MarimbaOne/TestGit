@@ -3,12 +3,12 @@
 % This script initializes a random vector with changing number of entries 
 % with integers between 1 to 15 and sorts them first automatically, second 
 % manually and compares computational times
-
+function Sort_man_auto(num,range)
 
 %% Initialize vector
-num = 10;
-range = 15;
-vec = round(rand(num,1)*(range-1)+1);
+% num = 10;
+% range = 15;
+vec = round(rand(num,1)*(range-1)+1)
 
 % Show distribution
 if 0
@@ -36,10 +36,10 @@ for i=2:num
         end
     end
 end
-t2=toc;
-
+t2=toc;sort2
 
 ratio=t2/t1;
 disp(['The evaluation time for automatic sort was: ' num2str(t1)])
 disp(['The evaluation time for manual sort was: ' num2str(t2)])
 disp(['Therefore the automatic search was faster by the factor of: ' num2str(ratio)])
+end
