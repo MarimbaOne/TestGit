@@ -14,7 +14,7 @@ vec = round(rand(num,1)*(range-1)+1);
 if 0
 amount=zeros(1,15);
 for i = 1:range
-    amount(i)=length(find(vec==i));
+    amount(i)=length(find(vec==i));     % find all entries equal to number and count the entries
 end
 plot(amount)
 grid 
